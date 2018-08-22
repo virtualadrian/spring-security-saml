@@ -21,7 +21,7 @@ spring:
         read-timeout: 10000
         connect-timeout: 5000
       service-provider:
-        entity-id: spring.security.saml.sp.id
+#        entity-id: spring.security.saml.sp.id
         alias: boot-sample-sp
         sign-metadata: true
         sign-requests: true
