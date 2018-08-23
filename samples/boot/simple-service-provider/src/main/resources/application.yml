@@ -160,3 +160,11 @@ spring:
         - alias: simplesamlphp
           metadata: http://simplesaml-for-spring-saml.cfapps.io/saml2/idp/metadata.php
           link-text: Simple SAML PHP IDP
+#        - alias: okta-tenant-one-app
+#          metadata: https://dev-254964.oktapreview.com/app/exkg0xlsuaOZSlbu40h7/sso/saml/metadata
+#          link-text: Okta Tenant One
+#          name-id: urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress
+#        - alias: okta-tenant-two-app
+#          metadata: https://dev-254964.oktapreview.com/app/exkg0xownnq6nDJva0h7/sso/saml/metadata
+#          link-text: Okta Tenant Two
+#          name-id: urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress
