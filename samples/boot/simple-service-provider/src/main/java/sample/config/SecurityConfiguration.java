@@ -17,11 +17,11 @@
 
 package sample.config;
 
-import javax.servlet.http.HttpServletRequest;
+import javax.servlet.Filter;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.saml.provider.config.SamlConfigurationRepository;
+import org.springframework.security.saml.provider.config.ThreadLocalSamlConfigurationRepository;
 import org.springframework.security.saml.provider.service.config.SamlServiceProviderSecurityConfiguration;
 
 @Configuration
@@ -33,7 +33,9 @@ public class SecurityConfiguration extends SamlServiceProviderSecurityConfigurat
 	}
 
 	@Override
-	public SamlConfigurationRepository<HttpServletRequest> samlConfigurationRepository() {
-		return new MultiTenantConfigurationRepository(getHostConfiguration());
+	public Filter samlConfigurationFilter() {
+		return new OktaMultitenantSamlConfigurationFilter(
+			(ThreadLocalSamlConfigurationRepository) samlConfigurationRepository()
+		);
 	}
 }
