@@ -1,4 +1,4 @@
-# Spring SAML
+# Spring SAML - Fork of Multi-tenant example
 
 [![Build Status](https://travis-ci.org/spring-projects/spring-security-saml.svg?branch=develop)](https://github.com/spring-projects/spring-security-saml/)
 
